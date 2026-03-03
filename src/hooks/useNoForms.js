@@ -28,7 +28,7 @@ function buildPrompt(input, existingNodes) {
 }
 
 function generateId() {
-  return `node-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  return `node-${crypto.randomUUID()}`;
 }
 
 function parseOllamaResponse(raw) {
