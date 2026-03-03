@@ -1,0 +1,111 @@
+.spatial-node-wrapper {
+  position: fixed;
+  width: 400px;
+  transform: translateX(-50%);
+}
+
+.spatial-node__card {
+  background: rgba(8, 14, 28, 0.82);
+  border: 1px solid var(--node-accent, #4fc3f7);
+  border-radius: 16px;
+  padding: 16px 20px;
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 0 24px -8px var(--node-accent, #4fc3f7);
+  color: #e8f4ff;
+  font-size: 14px;
+  animation: spatial-node-appear 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes spatial-node-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.spatial-node__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.spatial-node__type-badge {
+  display: inline-block;
+  background: var(--node-accent, #4fc3f7);
+  color: #050d1a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.spatial-node__time {
+  font-size: 11px;
+  color: rgba(150, 180, 210, 0.5);
+}
+
+.spatial-node__text {
+  margin: 0 0 8px;
+  line-height: 1.5;
+  color: rgba(220, 235, 255, 0.85);
+}
+
+.spatial-node__content-list {
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.spatial-node__key {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--node-accent, #4fc3f7);
+  opacity: 0.8;
+}
+
+.spatial-node__val {
+  color: rgba(220, 235, 255, 0.85);
+}
+
+.spatial-node__connections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(120, 200, 255, 0.1);
+}
+
+.spatial-node__connection-tag {
+  font-size: 11px;
+  color: rgba(120, 200, 255, 0.7);
+  background: rgba(120, 200, 255, 0.08);
+  border: 1px solid rgba(120, 200, 255, 0.2);
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+
+.spatial-node__raw {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: rgba(150, 180, 210, 0.4);
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
