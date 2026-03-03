@@ -1,4 +1,4 @@
-# spatial-mcp-shell
+# Spatial MCP Shell
 Next generation of spatial computing based on the MCP paradigm and the No-Forms capture system. [SPATIAL-OS] [ZENITH]
 
 # 🛸 Spatial MCP Shell & No-Forms Submodule
